@@ -5,7 +5,7 @@
 
 ---
 
-### Screen 1:
+### Screen 2:
 ![Dashboard UI](./screenshots/screenshot2.png)
 
 
