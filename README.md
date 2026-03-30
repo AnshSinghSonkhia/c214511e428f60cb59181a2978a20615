@@ -1,7 +1,12 @@
 # Assignment - Frontend Developer (React) - Ansh Singh Sonkhia
 
+### Screen 1:
+![Dashboard UI](./screenshots/screenshot1.png)
 
+---
 
+### Screen 1:
+![Dashboard UI](./screenshots/screenshot2.png)
 
 
 
