@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  /* Primary Color */
+  --color-primary: #4F46E5;
+  --color-primary-50: #EEEEFF;
+  --color-primary-100: #E0E7FF;
+  --color-primary-200: #C7D2FE;
+  --color-primary-500: #6366F1;
+  --color-primary-600: #4F46E5;
+  --color-primary-700: #4338CA;
+
+  /* Secondary Color */
+  --color-secondary: #1E1B4B;
+  --color-secondary-800: #1E1B4B;
+  --color-secondary-900: #0F0D2E;
+}
+
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+      "Helvetica Neue", Arial, sans-serif;
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .sidebar-item {
+    @apply flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-gray-600 
+           hover:bg-gray-100 cursor-pointer transition-colors duration-150;
+  }
+
+  .sidebar-item-active {
+    @apply bg-indigo-50 text-indigo-700 font-medium;
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.15s ease-out;
+}
+
+.animate-slide-in {
+  animation: slide-in 0.2s ease-out;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-12deg);
+  }
+}
+
+@keyframes shimmer-reverse {
+  0% {
+    transform: translateX(150%) skewX(-12deg);
+  }
+  100% {
+    transform: translateX(-150%) skewX(-12deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s ease-in-out infinite;
+}
+
+.animate-shimmer-reverse {
+  animation: shimmer-reverse 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
